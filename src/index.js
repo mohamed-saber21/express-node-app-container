@@ -40,7 +40,7 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
 redisClient.set('products', 'products data');
-  res.send('<h1>hiii welcome</h1>');
+  res.send('<h1>i try to get data and test docker hub</h1>');
 
 });
 

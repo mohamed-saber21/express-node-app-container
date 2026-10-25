@@ -6,6 +6,7 @@ services:
   node-app:
     build: .
     container_name: express-node-app-container
+    image: mohamedsaber21/express-node-app-docker
     ports:
       - "4000:4000"
     env_file:
