@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const redis = require('redis');
 const app = express();
 const {Client}= require('pg');
+const os = require('os');
 const port = process.env.PORT || 4000;
 //connect to redis
 const REDIS_PORT = 6379;
@@ -39,8 +40,9 @@ app.listen(port, () => {
 });
 
 app.get('/', (req, res) => {
+  console.log(`trafic from: ${os.hostname}` );
 redisClient.set('products', 'products data');
-  res.send('<h1>i try to get data and test docker hub</h1>');
+  res.send('<h1>i try to get data and test docker hub and watchtower</h1>');
 
 });
 
